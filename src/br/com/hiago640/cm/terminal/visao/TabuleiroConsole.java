@@ -1,12 +1,12 @@
-package br.com.hiago640.cm.visao;
+package br.com.hiago640.cm.terminal.visao;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import br.com.hiago640.cm.excecao.ExplosaoException;
-import br.com.hiago640.cm.excecao.SairException;
-import br.com.hiago640.cm.modelo.Tabuleiro;
+import br.com.hiago640.cm.terminal.excecao.ExplosaoException;
+import br.com.hiago640.cm.terminal.excecao.SairException;
+import br.com.hiago640.cm.terminal.modelo.Tabuleiro;
 
 public class TabuleiroConsole {
 

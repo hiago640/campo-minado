@@ -1,7 +1,7 @@
-package br.com.hiago640.cm;
+package br.com.hiago640.cm.terminal;
 
-import br.com.hiago640.cm.modelo.Tabuleiro;
-import br.com.hiago640.cm.visao.TabuleiroConsole;
+import br.com.hiago640.cm.terminal.modelo.Tabuleiro;
+import br.com.hiago640.cm.terminal.visao.TabuleiroConsole;
 
 public class Aplicacao {
 

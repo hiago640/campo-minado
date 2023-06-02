@@ -1,4 +1,4 @@
-package br.com.hiago640.cm.modelo;
+package br.com.hiago640.cm.terminal.modelo;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -6,7 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.hiago640.cm.excecao.ExplosaoException;
+import br.com.hiago640.cm.terminal.excecao.ExplosaoException;
+import br.com.hiago640.cm.terminal.modelo.Campo;
 
 class CampoTest {
 

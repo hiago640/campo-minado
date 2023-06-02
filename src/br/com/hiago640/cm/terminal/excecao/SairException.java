@@ -1,4 +1,4 @@
-package br.com.hiago640.cm.excecao;
+package br.com.hiago640.cm.terminal.excecao;
 
 public class SairException extends RuntimeException {
 
