@@ -128,9 +128,11 @@ public class Campo {
 	}
 
 	void reiniciar() {
-		aberto = false;
-		minado = false;
-		marcado = false;
+		this.aberto = false;
+		this.minado = false;
+		this.marcado = false;
+		
+		notificarObserver(CampoEventoEnum.REINICIAR);
 	}
 
 }

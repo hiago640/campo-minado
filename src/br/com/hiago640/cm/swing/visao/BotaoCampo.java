@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.SwingUtilities;
 
 import br.com.hiago640.cm.swing.modelo.Campo;
 import br.com.hiago640.cm.swing.modelo.CampoEventoEnum;
@@ -24,6 +25,8 @@ public class BotaoCampo extends JButton implements CampoObserver, MouseListener 
 	public BotaoCampo(Campo campo) {
 		this.campo = campo;
 		setBackground(BG_DEFAULT);
+		setOpaque(true);
+		
 		setBorder(BorderFactory.createBevelBorder(0));
 
 		addMouseListener(this);
@@ -46,28 +49,45 @@ public class BotaoCampo extends JButton implements CampoObserver, MouseListener 
 			break;
 		}
 		default:
+			System.out.println(event);
 			aplicarEstiloDefault();
 		}
+		
+		SwingUtilities.invokeLater(() -> {
+			repaint();
+			validate();
+		});
 	}
 
 	private void aplicarEstiloDefault() {
-		// TODO Auto-generated method stub
-
+		setBackground(BG_DEFAULT);
+		setBorder(BorderFactory.createBevelBorder(0));
+		setText("");
 	}
 
 	private void aplicarEstiloExplodir() {
 		setBackground(BG_EXPLOSAO);
-
+		setForeground(Color.WHITE);
+		setText("X");
 	}
 
 	private void aplicarEstiloMarcar() {
 		setBackground(BG_MARCADO);
+		setForeground(Color.BLACK);
+		setText("M");
 
 	}
 
 	private void aplicarEstiloAbrir() {
+		
+		setBorder(BorderFactory.createLineBorder(Color.GRAY));	
+
+		if(campo.isMinado()) {
+			setBackground(BG_EXPLOSAO);
+			return;
+		}
+		
 		setBackground(BG_DEFAULT);
-		setBorder(BorderFactory.createLineBorder(Color.GRAY));
 		
 		switch (campo.minasNaVizinhanca()) {
 		case 1: {
