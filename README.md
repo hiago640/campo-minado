@@ -30,8 +30,3 @@ O jogo Campo Minado possui as seguintes funcionalidades:
 2. Clone este repositório para o diretório desejado em seu computador.
 3. Abra o projeto em sua IDE Java de preferência (Eclipse, IntelliJ, NetBeans, etc.).
 4. Compile e execute o arquivo `CampoMinado.java`.
-
-```shell
-javac CampoMinado.java
-java CampoMinado
-```
